@@ -85,31 +85,31 @@ export const SawtAlHassanPage: React.FC<SawtAlHassanPageProps> = ({ onGoToMemory
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-10 sm:pt-16 sm:pb-12">
           <div className="max-w-3xl mb-10">
             <div className="flex flex-wrap items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#0E5A3E] mb-3">
-              <span>ملحمة المسيرة الخضراء</span>
+              <span>الأغنية الوطنية الخالدة</span>
               <span aria-hidden="true">·</span>
-              <span>6 نونبر 1975</span>
+              <span>ذكرى عيد الاستقلال</span>
               <span aria-hidden="true">·</span>
-              <span>الوحدة الترابية</span>
+              <span>في حب الوطن والعرش</span>
             </div>
 
             <h1 className="font-display text-4xl sm:text-6xl font-bold text-[#8B1522] leading-tight mb-4 [text-wrap:balance]">
-              أغنية «صوت الحسن ينادي»
+              أغنية «يا بلادي عيشي»
             </h1>
 
             <p className="text-sm sm:text-lg text-[#4A3E37] leading-relaxed max-w-2xl">
-              النشيد الخالد الذي رافق خطى ثلاثمائة وخمسين ألف مغربي ومغربية نحو الصحراء المغربية، حاملاً قيم السلم والإيمان ووحدة التراب الوطني من طنجة إلى الكويرة.
+              رائعة غنائية مغربية خالدة تتغنى بجمال الوطن وعراقته وجُوده، وتحتفي بفرحة عيد الاستقلال وتلاحم الشعب المغربي مع ملكه المحبوب.
             </p>
           </div>
 
-          {/* Rising Star-Wars-Style Crawl Stage for "صوت الحسن ينادي" */}
+          {/* Rising Star-Wars-Style Crawl Stage for "يا بلادي عيشي" */}
           <div className="relative mx-auto max-w-4xl rounded-xl border border-[#C9A227]/60 bg-gradient-to-b from-[#FBF6EA] via-[#F2E9D5] to-[#EAE0CA] shadow-xl overflow-hidden">
             <div className="flex items-center justify-between px-5 py-3 border-b border-[#C9A227]/35 bg-[#EFE6D3]">
               <div className="flex items-center gap-2 text-xs font-semibold text-[#0E5A3E]">
                 <MoroccanStarIcon className="w-4 h-4 text-[#8B1522]" />
-                <span>صوت الحسن ينادي — العرض الصاعد الكامل</span>
+                <span>يا بلادي عيشي — العرض الصاعد الكامل</span>
               </div>
               <div className="text-xs font-medium text-[#5C4D42] tabular-nums">
-                1975 · المسيرة الخضراء
+                ذكرى الاستقلال · أغنية وطنية
               </div>
             </div>
 
@@ -134,10 +134,10 @@ export const SawtAlHassanPage: React.FC<SawtAlHassanPageProps> = ({ onGoToMemory
                   >
                     <div className="space-y-2 pb-4 border-b border-[#C9A227]/45">
                       <p className="text-xs sm:text-sm font-semibold tracking-widest text-[#0E5A3E]">
-                        نشيد المسيرة الخضراء المظفرة
+                        أغنية وطنية مغربية أصيلة
                       </p>
                       <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#8B1522]">
-                        صَوْتُ الحَسَنْ يُنَادِي
+                        يَا بِلَادِي عِيشِي
                       </h2>
                     </div>
 
@@ -150,7 +150,7 @@ export const SawtAlHassanPage: React.FC<SawtAlHassanPageProps> = ({ onGoToMemory
                           <p
                             key={idx}
                             className={`font-display leading-relaxed ${
-                              line.includes('الله الله') || line.includes('الله اكبر')
+                              line.includes('عيشي عيشي') || line === 'يا بلادي عيشي'
                                 ? 'text-2xl sm:text-3xl font-bold text-[#0E5A3E]'
                                 : 'text-2xl sm:text-3xl font-bold text-[#8B1522]'
                             }`}
@@ -167,7 +167,7 @@ export const SawtAlHassanPage: React.FC<SawtAlHassanPageProps> = ({ onGoToMemory
               <div className="p-6 sm:p-10 max-h-[460px] overflow-y-auto bg-[#F8F2E4]">
                 <div className="max-w-2xl mx-auto text-center space-y-6">
                   <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#8B1522] pb-3 border-b border-[#C9A227]/35">
-                    كلمات نشيد «صوت الحسن ينادي» كاملة
+                    كلمات أغنية «يا بلادي عيشي» كاملة
                   </h2>
                   {SAWT_AL_HASSAN_STANZAS.map((stanza) => (
                     <div key={stanza.id} className="p-5 rounded-lg bg-[#F2E9D5]/75 border border-[#C9A227]/35 space-y-2">
@@ -178,7 +178,9 @@ export const SawtAlHassanPage: React.FC<SawtAlHassanPageProps> = ({ onGoToMemory
                         <p
                           key={idx}
                           className={`font-display text-xl sm:text-2xl font-bold leading-relaxed ${
-                            line.includes('الله الله') || line.includes('الله اكبر') ? 'text-[#0E5A3E]' : 'text-[#8B1522]'
+                            line.includes('عيشي عيشي') || line === 'يا بلادي عيشي'
+                              ? 'text-[#0E5A3E]'
+                              : 'text-[#8B1522]'
                           }`}
                         >
                           {line}
@@ -322,7 +324,7 @@ export const SawtAlHassanPage: React.FC<SawtAlHassanPageProps> = ({ onGoToMemory
                         <p
                           key={idx}
                           className={`font-display leading-loose ${
-                            line.includes('الله الله') || line.includes('الله اكبر')
+                            line.includes('عيشي عيشي') || line === 'يا بلادي عيشي'
                               ? 'text-2xl sm:text-3xl font-bold text-[#0E5A3E]'
                               : 'text-xl sm:text-2xl font-bold text-[#1C1613]'
                           }`}
@@ -346,35 +348,35 @@ export const SawtAlHassanPage: React.FC<SawtAlHassanPageProps> = ({ onGoToMemory
               </div>
 
               <h2 className="font-display text-2xl font-bold text-[#1C1613]">
-                روح المسيرة الخضراء
+                في حب الوطن والعرش
               </h2>
 
               <p className="text-sm text-[#4A3E37] leading-loose">
-                انبثقت أغنية «صوت الحسن ينادي» سنة 1975 لتكون اللسان الشعبي الصادق لنداء الملك الراحل الحسن الثاني، حيث لبى مئات الآلاف من المغاربة نداء الوطن بروح سلمية أبهرت العالم، متسلحين بالقرآن الكريم والعلم المغربي الأحمر المتوج بالنجمة الخضراء.
+                تعد أغنية «يا بلادي عيشي» من أرقى الأناشيد الوطنية المغربية التي تُصدح بها الحناجر في الأعياد الوطنية ومناسبات الفخر، إذ تجمع بين التغني بجمال المغرب وكرمه، والاحتفاء ببهجة عيد الاستقلال والوفاء للعرش العلوي المجيد.
               </p>
 
               <div className="pt-4 border-t border-[#C9A227]/25 space-y-3 text-sm">
                 <div className="flex items-center justify-between gap-4">
-                  <span className="text-[#6F5D4E]">التاريخ المرجعي</span>
-                  <span className="font-semibold text-[#1C1613] tabular-nums">6 نونبر 1975</span>
+                  <span className="text-[#6F5D4E]">الموضوع</span>
+                  <span className="font-semibold text-[#1C1613]">حب الوطن والافتخار بالمغرب</span>
                 </div>
                 <div className="flex items-center justify-between gap-4">
-                  <span className="text-[#6F5D4E]">عدد المتطوعين</span>
-                  <span className="font-semibold text-[#0E5A3E] tabular-nums">350,000 متطوع</span>
+                  <span className="text-[#6F5D4E]">المناسبة</span>
+                  <span className="font-semibold text-[#0E5A3E]">ذكرى عيد الاستقلال المجيد</span>
                 </div>
                 <div className="flex items-center justify-between gap-4">
-                  <span className="text-[#6F5D4E]">الدلالة الوطنية</span>
-                  <span className="font-semibold text-[#8B1522]">استكمال الوحدة الترابية</span>
+                  <span className="text-[#6F5D4E]">الدلالة</span>
+                  <span className="font-semibold text-[#8B1522]">تلاحم العرش والشعب</span>
                 </div>
               </div>
             </div>
 
             <div className="p-6 sm:p-7 bg-[#EAE0CA] text-[#1C1613] border border-[#C9A227]/55 rounded-xl space-y-4">
               <h3 className="font-display text-2xl font-bold text-[#8B1522]">
-                من وثيقة الاستقلال إلى المسيرة الخضراء
+                ذاكرة عيد الاستقلال المجيد
               </h3>
               <p className="text-sm text-[#4A3E37] leading-relaxed">
-                لم تكن المسيرة الخضراء إلا امتداداً متجدداً للميثاق الوطني الذي تأسس في ملحمة 11 يناير 1944 وعيد الاستقلال في 18 نونبر 1955.
+                تعرف على الدلالة التاريخية ليوم 18 نونبر 1955 باللغتين العربية والفرنسية في صفحة التعريف التاريخي.
               </p>
               <button
                 type="button"

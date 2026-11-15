@@ -59,7 +59,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeView, onNavigate }) => {
                 : 'hover:text-[#0E5A3E]'
             }`}
           >
-            صوت الحسن ينادي
+            يا بلادي عيشي
           </button>
 
           <button
@@ -119,7 +119,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeView, onNavigate }) => {
             onClick={() => handleLinkClick('sawt-al-hassan')}
             className="w-full text-right px-3 py-2.5 text-sm font-semibold text-[#0E5A3E] hover:bg-[#EFE8D8] rounded-md block cursor-pointer"
           >
-            صوت الحسن ينادي
+            يا بلادي عيشي
           </button>
           <button
             type="button"

@@ -100,7 +100,7 @@ export default function App() {
               onClick={() => handleNavigate('sawt-al-hassan')}
               className="hover:text-[#0E5A3E] transition-colors cursor-pointer"
             >
-              صوت الحسن ينادي
+              يا بلادي عيشي
             </button>
             <button
               type="button"
