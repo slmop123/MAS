@@ -10,6 +10,7 @@ import { AnthemSection } from './components/AnthemSection';
 import { RoyalGallery } from './components/RoyalGallery';
 import { SawtAlHassanPage } from './components/SawtAlHassanPage';
 import { IndependenceMemoryPage } from './components/IndependenceMemoryPage';
+import { AlMasrahiyaPage } from './components/AlMasrahiyaPage';
 import { MoroccanStarIcon } from './components/MoroccanOrnaments';
 
 export default function App() {
@@ -62,6 +63,8 @@ export default function App() {
           />
         )}
 
+        {activeView === 'masrahiya' && <AlMasrahiyaPage />}
+
         {activeView === 'memory-document' && <IndependenceMemoryPage />}
       </div>
 
@@ -101,6 +104,13 @@ export default function App() {
               className="hover:text-[#0E5A3E] transition-colors cursor-pointer"
             >
               يا بلادي عيشي
+            </button>
+            <button
+              type="button"
+              onClick={() => handleNavigate('masrahiya')}
+              className="hover:text-[#8B1522] transition-colors cursor-pointer"
+            >
+              المسرحية
             </button>
             <button
               type="button"

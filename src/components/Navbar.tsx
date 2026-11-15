@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
-export type ActiveView = 'anthem' | 'sawt-al-hassan' | 'memory-document';
+export type ActiveView = 'anthem' | 'sawt-al-hassan' | 'masrahiya' | 'memory-document';
 
 interface NavbarProps {
   activeView: ActiveView;
@@ -29,7 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeView, onNavigate }) => {
         </button>
 
         {/* Zone 2: Concise single-line navigation links */}
-        <nav className="hidden md:flex items-center gap-7 text-sm font-semibold text-[#3B2E28]" aria-label="التنقل الرئيسي">
+        <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-[#3B2E28]" aria-label="التنقل الرئيسي">
           <button
             type="button"
             onClick={() => handleLinkClick('anthem', 'anthem-stage')}
@@ -60,6 +60,18 @@ export const Navbar: React.FC<NavbarProps> = ({ activeView, onNavigate }) => {
             }`}
           >
             يا بلادي عيشي
+          </button>
+
+          <button
+            type="button"
+            onClick={() => handleLinkClick('masrahiya')}
+            className={`relative py-1 transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C9A227] ${
+              activeView === 'masrahiya'
+                ? 'text-[#8B1522] after:absolute after:bottom-0 after:inset-x-0 after:h-0.5 after:bg-[#C9A227]'
+                : 'hover:text-[#8B1522]'
+            }`}
+          >
+            المسرحية
           </button>
 
           <button
@@ -120,6 +132,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeView, onNavigate }) => {
             className="w-full text-right px-3 py-2.5 text-sm font-semibold text-[#0E5A3E] hover:bg-[#EFE8D8] rounded-md block cursor-pointer"
           >
             يا بلادي عيشي
+          </button>
+          <button
+            type="button"
+            onClick={() => handleLinkClick('masrahiya')}
+            className="w-full text-right px-3 py-2.5 text-sm font-semibold text-[#8B1522] hover:bg-[#EFE8D8] rounded-md block cursor-pointer"
+          >
+            المسرحية
           </button>
           <button
             type="button"
